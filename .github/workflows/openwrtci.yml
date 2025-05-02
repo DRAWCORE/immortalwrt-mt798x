@@ -58,7 +58,7 @@ jobs:
           ./scripts/feeds install -a
 
       - name: Generate configuration file
-        run: wget http://8.218.107.234:5250/d/local/ax3000t.config .config
+        run: wget -o .config http://8.218.107.234:5250/d/local/ax3000t.config
 
       - name: Download packages
         run: make download -j16
